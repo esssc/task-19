@@ -279,3 +279,27 @@ body #blog .content .blog-boxes .boxes p {
     align-items: center;
   }
 }
+body #quick {
+  background-color: #11749e;
+}
+body #quick .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 105px;
+  padding-bottom: 155px;
+  margin-bottom: 20px;
+}
+body #quick .container .quick-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+body #quick .container .quick-box img {
+  width: 100px;
+  height: 70px;
+  padding-right: 44px;
+}
+body #quick .container .quick-box p {
+  width: 450px;
+}
