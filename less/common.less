@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+	background: @background;
+	font: @fontSize/1 @ff; 
+	color:@color;
+	position: relative;
+	z-index: 1;
+	line-height: @lineHeight;
+}
+a {
+	color:@link;
+}
+a:hover {
+	color : @linkHover;
+	text-decoration: none;
+}
+strong, b, .b {
+	font-weight: 600;
+}
+em, .i{
+	font-style: italic;
+}
+button, .btn, .button{
+ cursor: pointer;
+}
+section {
+	
+	z-index: 2
+}
+.container{
+	max-width: @width;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+	padding: 0 10px;
+}
+.clearfix{
+	clear: both;
+	height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
