@@ -662,9 +662,11 @@ body #form form textarea {
 body #form form textarea::placeholder {
   color: #ffffff;
 }
-body #form form a {
+body #form form .btn-submit {
   padding: 20px 65px 25px 65px;
   background-color: #11749e;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 body #map iframe {
   width: 100%;
