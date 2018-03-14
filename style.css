@@ -694,3 +694,19 @@ label#email-error {
   color: red;
   display: block;
 }
+label#name-error {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: red;
+  display: block;
+}
+label#phone-error {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: red;
+  display: block;
+}
