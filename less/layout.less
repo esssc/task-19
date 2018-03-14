@@ -8,11 +8,10 @@ body{
 		background-image: url('images/headerbanner.png');
 		background-repeat:no-repeat;
 		background-size: cover;
-		
-		
 		header{
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 			.logo{
 				width: 87px;
 				height: 83px;
@@ -95,6 +94,44 @@ body{
 					padding-top: 20px;
 				}
 			}	
+			@media screen and (max-width: 750px){
+				h2{
+					font-size: 110px;
+				}
+			}
+			@media screen and (max-width: 550px){
+				h2{
+					font-size: 80px;
+
+				}
+				h4{
+					font-size:19px;
+					line-height: 60px;
+					letter-spacing: 1px;
+				}
+			}
+			@media screen and (max-width: 410px){
+				h2{
+					font-size: 60px;
+				}
+			}
+		}
+		@media screen and (max-width: 965px){
+			header{
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				nav{
+					margin: 0 auto;
+					ul{
+						li{
+
+							display: block;
+							padding-bottom: 10px;
+						}
+					}
+				}
+			}
 		}
 	}
 	#Features{
@@ -105,6 +142,7 @@ body{
 		text-align: center;
 		padding-top: 170px;
 		padding-bottom: 130px;
+		
 		h3{
 			font-size: 37.55px;
 			line-height: 84.6px;
@@ -116,7 +154,7 @@ body{
 			flex-wrap: wrap;
 			.boxes{
 				width: 275px;
-
+				margin: 0 auto;
 				.imagebox{
 					width: 140px;
 					height: 140px;
@@ -299,6 +337,7 @@ body{
 				flex-wrap: wrap;
 				text-align: center;
 				.boxes{
+					margin: 0 auto;
 					width: 275px;
 					.imagebox{
 						
@@ -342,13 +381,13 @@ body{
 				margin-bottom: 20px;
 				
 				img{
-					width: 100px;
+					min-width: 100px;
 					height: 70px;
 					padding-right: 44px;
 				}
 				p{
-					width: 450px;
-					min-width: 30%;
+					max-width: 450px;
+					
 				}
 
 			}
@@ -414,7 +453,6 @@ body{
 	#ourteam{
 		padding: 65px 0 105px 0;
 		text-align: center;
-
 		h2 {
 			font-size: 37px;
 			line-height: 45px;
@@ -448,16 +486,16 @@ body{
 			flex-wrap: wrap;
 			.teammates{
 				position: relative;
+				margin: 0 auto;
 			}
 			.before{
 				display: block;
 				width: 215px;
 				height: 67px;
-				position: absolute;
-				bottom: -20px;
-				left: 50%;
-				transform: translate(-50%, 0);
+				position:relative;
+				margin: -50px 20px 0 20px;
 				background-color: #ffffff;
+				margin-bottom: 20px;
 				h4{
 					padding-top: 20px;
 					color: #11749e;
@@ -468,6 +506,11 @@ body{
 					color: #000000;
 					font-size: 15px;
 				}
+			}
+			@media screen and (max-width: 600px){
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}	
@@ -510,8 +553,23 @@ body{
 				background: transparent;
 				border: 1px solid #ffffff;
 				color: #ffffff;
+				&::-webkit-input-placeholder {
+   	 				color: #ffffff;
+				}
+				&:-ms-input-placeholder {
+   	 				color: #ffffff;
+				}
+				&::-ms-input-placeholder {
+   	 				color: #ffffff;
+				}
 				&::placeholder {
    	 				color: #ffffff;
+				}
+				@media screen and (max-width: 1000px){
+					display: block;
+					width: 96%;
+					padding-right: 0;
+					margin: 20px auto;
 				}
 			}
 			textarea{
@@ -522,12 +580,24 @@ body{
 				background: transparent;
 				min-height: 145px;
 				color: #ffffff;
+				&::-webkit-input-placeholder {
+   	 				color: #ffffff;
+				}
+				&:-ms-input-placeholder {
+   	 				color: #ffffff;
+				}
+				&::-ms-input-placeholder {
+   	 				color: #ffffff;
+				}
 				&::placeholder {
    	 				color: #ffffff;
 				}
 			}
 			.btn-submit{
-				padding: 20px 65px 25px 65px;
+				padding: 0;
+				border: none;
+				width: 230px;
+				height: 65px;
 				background-color: #11749e;
 				font-size: 20px;
 				text-transform: uppercase;
@@ -543,6 +613,7 @@ body{
 	footer{
 		background-color: #222222;
 		.container{
+			text-align: center;
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
@@ -551,30 +622,36 @@ body{
 				margin-bottom: 20px;
 				margin-right: 20px;
 			}
+			img{
+				margin: 0 auto;
+			}
 		}
 	}
 }
 label#email-error {
 	position: absolute;
-	bottom: -5px;
+	bottom: -45px;
 	left: 50%;
-	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	        transform: translate(-50%, 0);
    	color: red; 
    	display: block;
    }
 label#name-error {
 	position: absolute;
-	bottom: -25px;
+	bottom: -75px;
 	left: 50%;
-	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	        transform: translate(-50%, 0);
    	color: red; 
    	display: block;
 	}
 label#phone-error {
 	position: absolute;
-	bottom: -45px;
+	bottom: -95px;
 	left: 50%;
-	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	        transform: translate(-50%, 0);
    	color: red; 
    	display: block;
    	}

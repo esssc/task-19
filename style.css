@@ -201,6 +201,7 @@ body #home {
 body #home header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 body #home header .logo {
   width: 87px;
@@ -277,6 +278,40 @@ body #home .group-16 .btn-home a {
   margin: 0 auto;
   padding-top: 20px;
 }
+@media screen and (max-width: 750px) {
+  body #home .group-16 h2 {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body #home .group-16 h2 {
+    font-size: 80px;
+  }
+  body #home .group-16 h4 {
+    font-size: 19px;
+    line-height: 60px;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (max-width: 410px) {
+  body #home .group-16 h2 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 965px) {
+  body #home header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #home header nav {
+    margin: 0 auto;
+  }
+  body #home header nav ul li {
+    display: block;
+    padding-bottom: 10px;
+  }
+}
 body #Features {
   background-color: #11749e;
   background-image: url('images/w.png');
@@ -298,6 +333,7 @@ body #Features .feature {
 }
 body #Features .feature .boxes {
   width: 275px;
+  margin: 0 auto;
 }
 body #Features .feature .boxes .imagebox {
   width: 140px;
@@ -450,6 +486,7 @@ body #blog .content .blog-boxes {
   text-align: center;
 }
 body #blog .content .blog-boxes .boxes {
+  margin: 0 auto;
   width: 275px;
 }
 body #blog .content .blog-boxes .boxes h2 {
@@ -487,13 +524,12 @@ body #quick .container .quick-box {
   margin-bottom: 20px;
 }
 body #quick .container .quick-box img {
-  width: 100px;
+  min-width: 100px;
   height: 70px;
   padding-right: 44px;
 }
 body #quick .container .quick-box p {
-  width: 450px;
-  min-width: 30%;
+  max-width: 450px;
 }
 body #key-future {
   background-image: url('images/keybanner.png');
@@ -586,16 +622,16 @@ body #ourteam .team {
 }
 body #ourteam .team .teammates {
   position: relative;
+  margin: 0 auto;
 }
 body #ourteam .team .before {
   display: block;
   width: 215px;
   height: 67px;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: relative;
+  margin: -50px 20px 0 20px;
   background-color: #ffffff;
+  margin-bottom: 20px;
 }
 body #ourteam .team .before h4 {
   padding-top: 20px;
@@ -605,6 +641,13 @@ body #ourteam .team .before h4 {
 body #ourteam .team .before span {
   color: #000000;
   font-size: 15px;
+}
+@media screen and (max-width: 600px) {
+  body #ourteam .team {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 body #form {
   background-image: url('images/formbanner.jpg');
@@ -648,8 +691,25 @@ body #form form input {
   border: 1px solid #ffffff;
   color: #ffffff;
 }
+body #form form input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+body #form form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+body #form form input::-ms-input-placeholder {
+  color: #ffffff;
+}
 body #form form input::placeholder {
   color: #ffffff;
+}
+@media screen and (max-width: 1000px) {
+  body #form form input {
+    display: block;
+    width: 96%;
+    padding-right: 0;
+    margin: 20px auto;
+  }
 }
 body #form form textarea {
   padding: 15px 0 0 25px;
@@ -660,11 +720,23 @@ body #form form textarea {
   min-height: 145px;
   color: #ffffff;
 }
+body #form form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+body #form form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+body #form form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
 body #form form textarea::placeholder {
   color: #ffffff;
 }
 body #form form .btn-submit {
-  padding: 20px 65px 25px 65px;
+  padding: 0;
+  border: none;
+  width: 230px;
+  height: 65px;
   background-color: #11749e;
   font-size: 20px;
   text-transform: uppercase;
@@ -677,6 +749,7 @@ body footer {
   background-color: #222222;
 }
 body footer .container {
+  text-align: center;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -686,26 +759,32 @@ body footer .container p {
   margin-bottom: 20px;
   margin-right: 20px;
 }
+body footer .container img {
+  margin: 0 auto;
+}
 label#email-error {
   position: absolute;
-  bottom: -5px;
+  bottom: -45px;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   color: red;
   display: block;
 }
 label#name-error {
   position: absolute;
-  bottom: -25px;
+  bottom: -75px;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   color: red;
   display: block;
 }
 label#phone-error {
   position: absolute;
-  bottom: -45px;
+  bottom: -95px;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   color: red;
   display: block;
