@@ -451,6 +451,7 @@ body #form form {
   margin-top: 140px;
 }
 body #form form input {
+  position: relative;
   padding: 15px 0 15px 25px;
   margin: 0 13px 0 13px;
   margin-bottom: 36px;
@@ -496,4 +497,12 @@ body footer .container {
 body footer .container p {
   margin-bottom: 20px;
   margin-right: 20px;
+}
+label#email-error {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: red;
+  display: block;
 }
